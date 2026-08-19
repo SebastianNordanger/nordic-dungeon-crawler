@@ -14,4 +14,4 @@ A Norwegian folklore-themed dungeon crawler built in C#, featuring a REST API (A
 4. Open 'http://localhost:8080/index.html' for the frontend, or 'http://localhost:8080/swagger' for the API docs
 
 ## Built with
-C#, ASP.NEET Core, Docker, HTML/JS
+C#, ASP.NET Core, Docker, HTML/JS
