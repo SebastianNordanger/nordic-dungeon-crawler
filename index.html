@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Nordic Dungeon Crawler</title>
+</head>
+<body>
+    <h1>Nordic Dungeon Crawler</h1>
+    <!-- Battle button -->
+    <button onclick="fightBattle()">Hildr!</button>
+
+    <!-- Leaderboard button -->
+    <button onclick="showLeaderboard()">Leaderboard</button>
+
+    <!-- Shows the text of the battle result -->
+    <p id="result"></p>
+
+    <!-- Shows the leaderboard list -->
+    <p id="leaderboard"></p>
+
+    <!-- Handles the button clicks and will call the battle API -->
+    <script>
+        function fightBattle() {
+            fetch("api/battle")
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("result").innerText =
+                        "Winner: " + data.result.winnerName +
+                        "| Rounds survived: " + data.result.roundsSurvived +
+                        "| Date: " + data.result.formattedDate + 
+                        "| Best run: " + data.bestRun.winnerName + " (" + data.bestRun.roundsSurvived + " rounds, " + data.bestRun.formattedDate + ")";
+                });
+        }
+
+        function showLeaderboard() {
+            fetch("api/leaderboard")
+                .then(response => response.json())
+                .then(data => {
+                    let text = "";
+                    data.forEach(entry => {
+                        text += entry.winnerName + " - " + entry.roundsSurvived + " rounds (" + entry.formattedDate + ")<br>";
+                    });
+                    document.getElementById("leaderboard").innerHTML = text;
+                });
+        }
+    </script>
+</body>
+</html>

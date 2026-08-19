@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="NordicDungeonCrawler_CSharpProject1/NordicDungeonCrawler_CSharpProject1.csproj" />
+  <Project Path="NordicDungeonCrawler_CSharpProject1_WebAPI/NordicDungeonCrawler_CSharpProject1_WebAPI.csproj" Id="fb60f812-c9e3-4a2b-b97b-696993000475" />
+</Solution>
