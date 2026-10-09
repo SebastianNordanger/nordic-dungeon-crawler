@@ -1,4 +1,4 @@
-# nordic-dungeon-crawler
+# Nordic Dungeon Crawler
 A Norwegian folklore-themed dungeon crawler built in C#, featuring a REST API (ASP.NET Core), a simple web frontend, and Docker containerization.
 
 ## Features
@@ -9,9 +9,13 @@ A Norwegian folklore-themed dungeon crawler built in C#, featuring a REST API (A
 
 ## How to run
 1. Make sure Docker is installed
-2. From the solution root, run: 'docker build -t nordic-dungeon-crawler .'
-3. Run: 'docker run -p 8080:8080 nordic-dungeon-crawler'
-4. Open 'http://localhost:8080/index.html' for the frontend, or 'http://localhost:8080/swagger' for the API docs
+2. From the solution root, run: `docker build -t nordic-dungeon-crawler .`
+3. Run: `docker run -p 8080:8080 nordic-dungeon-crawler`
+4. Open `http://localhost:8080/index.html` for the frontend, or `http://localhost:8080/swagger` for the API docs
+
+## Available endpoints
+* `GET /api/battle` - runs a battle and returns the outcome
+* `GET /api/leaderboard` - returns the battle history for the leaderboard
 
 ## Built with
 C#, ASP.NET Core, Docker, HTML/JS
