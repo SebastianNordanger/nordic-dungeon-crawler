@@ -5,6 +5,7 @@ A Norwegian folklore-themed dungeon crawler built in C#, featuring a REST API (A
 - Console-based combat system (OOP: encapsulation, inheritance, polymorphism, abstraction)
 - Save/leaderboard system (CSV file storage)
 - REST API built with ASP.NET Core (Swagger UI included)
+- Simple web frontend (plain HTML/JS) with battle and leaderboard buttons
 - Dockerized (multi-stage Dockerfile)
 
 ## How to run
@@ -26,6 +27,7 @@ A Norwegian folklore-themed dungeon crawler built in C#, featuring a REST API (A
 2. From the solution root, run: `docker build -t nordic-dungeon-crawler .`
 3. Run: `docker run -p 8080:8080 nordic-dungeon-crawler`
 4. Open `http://localhost:8080/index.html` for the frontend, or `http://localhost:8080/swagger` for the API docs
+5. Press Ctrl+C in the terminal to stop it
 
 The Docker version keeps its own `highscores.csv`, so its leaderboard is separate from the local one.
 
