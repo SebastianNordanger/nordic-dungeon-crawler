@@ -1,5 +1,8 @@
 # Nordic Dungeon Crawler
+
 A Norwegian folklore-themed dungeon crawler built in C#, featuring a REST API (ASP.NET Core), a simple web frontend, and Docker containerization.
+
+<p align="center"><img src="nordic_dungeon_crawler_screenshot.png" alt="Nordic Dungeon Crawler screenshot"></p>
 
 ## Features
 - Console-based combat system (OOP: encapsulation, inheritance, polymorphism, abstraction)
